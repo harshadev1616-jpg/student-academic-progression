@@ -1,0 +1,337 @@
+:root {
+  color-scheme: dark;
+  --page: #090a10;
+  --surface: #11121b;
+  --surface-raised: #171824;
+  --line: rgba(255, 255, 255, 0.08);
+  --text: #f3f2fa;
+  --muted: #9c9caf;
+  --purple: #7a5cff;
+  --blue: #00bfff;
+}
+
+.stApp {
+  background:
+    radial-gradient(ellipse at 68% -12%, rgba(122, 92, 255, 0.15), transparent 34rem),
+    var(--page);
+  color: var(--text);
+  font-family: Inter, "Segoe UI", sans-serif;
+}
+
+.stApp h1,
+.stApp h2,
+.stApp h3,
+.stApp h4,
+.hero-title,
+.section-heading {
+  color: var(--text);
+  font-family: Inter, "Segoe UI", sans-serif;
+  letter-spacing: -0.035em;
+}
+
+.block-container {
+  max-width: 1440px;
+  padding: 2rem clamp(1rem, 3vw, 3rem) 4rem;
+}
+
+[data-testid="stSidebar"] {
+  background: #0d0e15;
+  border-right: 1px solid var(--line);
+}
+
+[data-testid="stSidebar"] > div:first-child {
+  padding-top: 1.5rem;
+}
+
+[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] p {
+  color: var(--muted);
+}
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0.25rem 0 1.2rem;
+}
+
+.brand-mark {
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  place-items: center;
+  border: 1px solid rgba(122, 92, 255, 0.45);
+  border-radius: 0.85rem;
+  background: linear-gradient(145deg, rgba(122, 92, 255, 0.3), rgba(0, 191, 255, 0.12));
+  color: #d7ceff;
+  font-family: Inter, "Segoe UI", sans-serif;
+  font-weight: 800;
+}
+
+.brand-title {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.brand-caption,
+.status-row {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.status-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.38rem 0;
+}
+
+.status-ok {
+  color: #61dfbd;
+}
+
+.status-error {
+  color: #ff9a9a;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  margin: 0.5rem 0 2.4rem;
+  padding: clamp(1.7rem, 4vw, 3rem);
+  border: 1px solid rgba(157, 136, 255, 0.19);
+  border-radius: 1.5rem;
+  background:
+    radial-gradient(ellipse at 86% 22%, rgba(0, 191, 255, 0.13), transparent 27rem),
+    linear-gradient(120deg, rgba(122, 92, 255, 0.16), rgba(17, 18, 27, 0.94) 56%);
+  box-shadow: 0 18px 70px rgba(0, 0, 0, 0.24);
+}
+
+.eyebrow,
+.section-kicker {
+  color: #a99aff;
+  font-size: 0.69rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+}
+
+.hero-title {
+  margin-top: 0.55rem;
+  font-size: clamp(2rem, 4.2vw, 3.15rem);
+  font-weight: 800;
+  line-height: 1.12;
+}
+
+.hero-subtitle {
+  margin-top: 0.7rem;
+  color: #b6b5c8;
+  font-size: clamp(0.94rem, 1.8vw, 1.08rem);
+}
+
+.powered-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 1.25rem;
+  padding: 0.44rem 0.72rem;
+  border: 1px solid rgba(0, 191, 255, 0.24);
+  border-radius: 999px;
+  background: rgba(0, 191, 255, 0.08);
+  color: #bfefff;
+  font-size: 0.75rem;
+}
+
+.badge-dot {
+  width: 0.42rem;
+  height: 0.42rem;
+  border-radius: 50%;
+  background: var(--blue);
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.7);
+}
+
+.section-heading {
+  margin: 2.6rem 0 0.35rem;
+  font-size: clamp(1.4rem, 2.2vw, 1.8rem);
+  font-weight: 750;
+}
+
+.section-description {
+  margin-bottom: 1rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.section-kicker {
+  margin-bottom: 0.75rem;
+}
+
+[data-testid="stMetric"] {
+  min-height: 7rem;
+  padding: 1.05rem 1.15rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.018));
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.13);
+}
+
+[data-testid="stMetricLabel"] p {
+  color: #aaa9bd;
+  font-size: 0.78rem;
+}
+
+[data-testid="stMetricValue"] {
+  color: var(--text);
+  font-family: Inter, "Segoe UI", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 750;
+}
+
+[data-testid="stMetricDelta"] {
+  display: none;
+}
+
+[data-testid="stMetric"] + div p,
+.stCaption {
+  color: var(--muted);
+}
+
+[data-testid="stForm"],
+[data-testid="stVerticalBlockBorderWrapper"] {
+  border-color: var(--line) !important;
+  border-radius: 1.1rem !important;
+  background: rgba(17, 18, 27, 0.8);
+}
+
+[data-testid="stNumberInput"] label,
+[data-testid="stWidgetLabel"] p {
+  color: #deddea;
+}
+
+[data-testid="stNumberInput"] input {
+  border-radius: 0.7rem;
+}
+
+button[kind="primary"] {
+  border: 1px solid rgba(174, 160, 255, 0.45);
+  border-radius: 0.75rem;
+  background: linear-gradient(100deg, #7051f4, #5640ce);
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 8px 22px rgba(91, 67, 213, 0.25);
+  transition: filter 150ms ease, transform 150ms ease;
+}
+
+button[kind="primary"]:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+.result-panel {
+  min-height: 100%;
+  padding: 1.2rem 1.35rem;
+  border: 1px solid rgba(122, 92, 255, 0.2);
+  border-radius: 1.1rem;
+  background:
+    radial-gradient(ellipse at 100% 0%, rgba(122, 92, 255, 0.13), transparent 20rem),
+    rgba(17, 18, 27, 0.85);
+}
+
+.prediction-value {
+  margin: 1.4rem 0 0.7rem;
+  color: #f4f1ff;
+  font-family: Inter, "Segoe UI", sans-serif;
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: -0.06em;
+  line-height: 1;
+}
+
+.prediction-value span {
+  color: #9997ad;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+[data-testid="stProgressBar"] > div > div {
+  background: linear-gradient(90deg, var(--purple), var(--blue));
+}
+
+.empty-result {
+  display: grid;
+  min-height: 13rem;
+  align-content: center;
+  justify-items: center;
+  text-align: center;
+  color: #dedbea;
+  font-weight: 600;
+}
+
+.input-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin: 0.65rem 0 0.8rem;
+}
+
+.input-summary span {
+  padding: 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: 0.7rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+
+.input-summary b {
+  display: block;
+  margin-top: 0.22rem;
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+.insight-card {
+  height: 100%;
+  padding: 1.4rem;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: var(--surface);
+}
+
+.insight-number {
+  margin: 1.25rem 0 0.3rem;
+  color: var(--blue);
+  font-family: "Manrope", sans-serif;
+  font-size: 2.8rem;
+  font-weight: 800;
+}
+
+.insight-card p {
+  color: #b0afc0;
+  line-height: 1.65;
+}
+
+.stAlert {
+  border-radius: 0.85rem;
+}
+
+hr {
+  border-color: var(--line);
+}
+
+@media (max-width: 700px) {
+  .block-container {
+    padding: 1rem 0.85rem 2.5rem;
+  }
+
+  .hero {
+    padding: 1.45rem;
+    border-radius: 1.1rem;
+  }
+
+  .input-summary {
+    grid-template-columns: 1fr;
+  }
+
+  [data-testid="stMetric"] {
+    min-height: 6rem;
+    padding: 0.85rem;
+  }
+}
